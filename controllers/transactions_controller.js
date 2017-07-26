@@ -10,7 +10,8 @@ function getAllTransactions(req, res, next) {
 }
 
 function getOneTransaction(req, res, next) {
-  transaction.find({_id: req.params.id}, (err, docs) => {
+  transaction.findById({_id: req.params.id}).populate
+  .then((err, docs) => {
     if (err) {
       res.send(err.message)
     }

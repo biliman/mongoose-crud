@@ -23,5 +23,9 @@ app.use('/books', book)
 const transaction = require('./routes/transactions_route')
 app.use('/transactions', transaction)
 
+// CUSTOMERS
+const customer = require('./routes/customers_route')
+app.use('/customers', customer)
+
 
 app.listen(3000);
